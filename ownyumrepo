@@ -1,0 +1,12 @@
+#!/bin/bash
+# Script was created by Álvaro Castillo, @sincorchetes under GPL License 2.0
+
+LOCALREPODIR="/var/www/html/local"
+YUMMAINDIR="/var/cache/yum/x86_64/7"
+REPOS=(base extras updates epel)
+
+# Copying packages
+for copy in ${REPOS[@]};
+do
+  cp -v ${YUMMAINDIR}/$copy/packages/* ${LOCALREPODIR}
+done
