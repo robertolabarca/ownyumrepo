@@ -10,3 +10,5 @@ for copy in ${REPOS[@]};
 do
   sudo cp -v ${YUMMAINDIR}/$copy/packages/* ${LOCALREPODIR}
 done
+
+sudo createrepo --update /var/www/html/local
